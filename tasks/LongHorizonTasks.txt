@@ -1,0 +1,11 @@
+Task:
+Look at the code for generating Autotests. See if these auto tests support "class-level" tests as well as "method-level" tests. i.e:
+```
+//> ::.check{...}
+MyClass: {
+  //> ::.check{...}
+  .myMethod(): Void -> {}
+  }
+```
+Should produce two sets of tests. One for the class, and one for the method.
+If the current behavior supports, this write a short report explaining why. Otherwise, implement this behaviour and verify it doesn't break any of the other tests
